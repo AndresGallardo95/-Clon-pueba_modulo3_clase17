@@ -3,17 +3,20 @@ def validate(opciones, eleccion):
     # Definir validación de eleccion
     ##########################################################################
     pass
-    
+
     ##########################################################################
     return eleccion
 
 
 if __name__ == '__main__':
-    
+
     eleccion = input('Ingresa una Opción: ').lower()
-    # letras = ['a','b','c','d'] # pueden probar con letras también para verificar su funcionamiento.
-    numeros = ['0','1']
-    # Si se ingresan valores no validos a eleccion debe seguir preguntando
-    validate(numeros, eleccion)
-    
-    
+
+    letras = ['a', 'b', 'c', 'd']
+    numeros = ['0', '1']
+
+    opciones = letras  # se puede cambiar por la variable numeros
+
+    eleccion_correcta = validate(opciones, eleccion)
+
+    print(f"La opcion {eleccion_correcta} es una opcion valida.")
