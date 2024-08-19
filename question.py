@@ -4,39 +4,32 @@ from shuffle import shuffle_alt
 
 # Opciones dadas para escoger.
 ###############################################
-opciones = {'basicas': [1,2,3],
-            'intermedias': [1,2,3],
-            'avanzadas': [1,2,3]}
+opciones = {'basicas': ['pregunta_1', 'pregunta_2', 'pregunta_3'],
+            'intermedias': ['pregunta_1', 'pregunta_2', 'pregunta_3'],
+            'avanzadas': ['pregunta_1', 'pregunta_2', 'pregunta_3']}
 ###############################################
 
 def choose_q(dificultad):
-    #escoger preguntas por dificultad
-    preguntas = 
-    
-    # usar opciones desde ambiente global
-    global 
-    # escoger una pregunta
-    n_elegido = 
-    # eliminarla del ambiente global para no escogerla de nuevo
-    
-    
-    # escoger enunciado y alternativas mezcladas
-    pregunta = 
-    alternativas = 
-    
-    
-    return pregunta['enunciado'], alternativas
+    # Escoger preguntas por dificultad
+    preguntas = p.pool_preguntas[dificultad]
+
+    # Usar opciones desde ambiente global
+    global opciones
+
+    # Escoger una pregunta al azar de las disponibles
+    n_elegido = random.choice(opciones[dificultad])
+
+    # Eliminarla del ambiente global para no escogerla de nuevo
+    opciones[dificultad].remove(n_elegido)
+
+    # Escoger enunciado y alternativas mezcladas
+    pregunta = preguntas[n_elegido]
+    alternativas = shuffle_alt(pregunta)
+
+    return pregunta['enunciado'][0], alternativas
 
 if __name__ == '__main__':
-    # si ejecuto el programa, las preguntas cambian de orden, pero nunca debieran repetirse
-    pregunta, alternativas = choose_q('basicas')
-    print(f'El enunciado es: {pregunta}')
-    print(f'Las alternativas son: {alternativas}')
-    
-    pregunta, alternativas = choose_q('basicas')
-    print(f'El enunciado es: {pregunta}')
-    print(f'Las alternativas son: {alternativas}')
-    
-    pregunta, alternativas = choose_q('basicas')
-    print(f'El enunciado es: {pregunta}')
-    print(f'Las alternativas son: {alternativas}')
+    # Ejemplo de uso
+    enunciado, alternativas = choose_q('basicas')
+    print(f'Enunciado: {enunciado}')
+    print(f'Alternativas: {alternativas}')
