@@ -11,3 +11,29 @@ El jugador define el número de preguntas a responder correspondientes a cada ni
 
 Ya que el programa es complejo se ha generado un backlog con tareas muy específicas, las cuales son desarrolladas paso a paso antes de ensamblar la app final.
 Todas las subtareas consistirán en la creación de un script en Python, la que contendrá las especificaciones de una funcionalidad.
+
+## Prerrequisitos o Dependencias
+
+Sistema Operativo Windows, Linux, MacOS
+Lenguaje de programación Python 3.12
+
+## Instalación del Proyecto
+
+Clonar el repositorio:
+
+```bash
+# git@github.com:vanemn/prueba_modulo3_clase17.git
+```
+
+
+
+Ingresar a la carpeta del proyecto:
+
+```bash
+# prueba_modulo3_clase17
+```
+
+Autor
+- [Vanessa Morales](https://github.com/vanemn)
+- [Benjamín Pardo](https://github.com/bpardo02)
+- [Nicole Pinilla](https://github.com/Npinilla19)
