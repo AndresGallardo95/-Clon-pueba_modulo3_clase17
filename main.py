@@ -33,10 +33,10 @@ opcion = input('Ingrese una opción para Jugar! (1 para jugar y 0 para salir): '
 
 # 2. Definir el comportamiento de Salir
 if opcion == '0':
-    print()
+    print("Saliendo del juego...")
     time.sleep(2)
     os.system(op_sys)
-    # finalizar programa
+    exit() # finalizar programa
     
 
 # Funcionamiento de preguntas
