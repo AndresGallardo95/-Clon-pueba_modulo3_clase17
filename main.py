@@ -60,9 +60,9 @@ while correcto and n_pregunta < 3*p_level:
         
         respuesta = input('Escoja la alternativa correcta:\n> ').lower()
         # 7. Validar la respuesta entregada
-        respuesta = 
+        respuesta = validate(respuesta, opciones=alternativas)
         # 8. Verificar si la respuesta es correcta o no
-        correcto = 
+        correcto = verificar(respuesta, alternativas)
         
         if correcto and n_pregunta < 3*p_level:
             print('Muy bien sigue así!')
