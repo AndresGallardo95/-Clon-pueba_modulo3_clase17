@@ -12,6 +12,21 @@ El jugador define el número de preguntas a responder correspondientes a cada ni
 Ya que el programa es complejo se ha generado un backlog con tareas muy específicas, las cuales son desarrolladas paso a paso antes de ensamblar la app final.
 Todas las subtareas consistirán en la creación de un script en Python, la que contendrá las especificaciones de una funcionalidad.
 
+## 01 - validador.py
+
+Se crea un programa llamado validador.py el cual permite validar si un valor se encuentra incluido en un conjunto de opciones.
+
+En caso de que no se ingrese una opción dentro del conjunto, la aplicación muestra un mensaje de error y
+solicita un nuevo valor hasta que se ingrese uno válido.
+
+## 02 - level.py
+
+El programa llamado level.py permite escoger el nivel de dificultad de la pregunta a realizar. Este programa debe solicitar número de la pregunta, y la cantidad de preguntas por nivel que puede ser 1, 2 o 3.
+
+## 03 - shuffle.py
+
+El programa llamado shuffle.py toma preguntas desde el archivo preguntas.py (con un nivel y una pregunta definida) y mezcla las alternativas para no darle un patron especifico.
+
 ## Prerrequisitos o Dependencias
 
 Sistema Operativo Windows, Linux, MacOS
@@ -25,8 +40,6 @@ Clonar el repositorio:
 # git@github.com:vanemn/prueba_modulo3_clase17.git
 ```
 
-
-
 Ingresar a la carpeta del proyecto:
 
 ```bash
@@ -34,6 +47,7 @@ Ingresar a la carpeta del proyecto:
 ```
 
 Autor
+
 - [Vanessa Morales](https://github.com/vanemn)
 - [Benjamín Pardo](https://github.com/bpardo02)
 - [Nicole Pinilla](https://github.com/Npinilla19)
