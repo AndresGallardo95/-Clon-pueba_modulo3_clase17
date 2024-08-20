@@ -29,7 +29,7 @@ opcion = input('''Ingrese una opción para Jugar!
         
     > ''')
 # 1. validar opcion
-opcion = input('Ingrese una opción para Jugar! (1 para jugar y 0 para salir): ')  
+opcion = validate(['1', '0'], opcion) 
 
 # 2. Definir el comportamiento de Salir
 if opcion == '0':
@@ -40,12 +40,12 @@ if opcion == '0':
     
 
 # Funcionamiento de preguntas
-while correcto and n_pregunta < 3*p_level:
+while correcto and n_pregunta < 3 * p_level:
     
     if n_pregunta == 0:
-        p_level = input('¿Cuántas preguntas por nivel? (Máximo 3): ')
+        p_level = validate(['1', '2', '3'], input('¿Cuántas preguntas por nivel? (Máximo 3): '))
         # 3. Validar el número de preguntas por nivel
-        p_level = int(validate(['1', '2', '3'], input("Ingrese el nivel de preguntas (1, 2, 3): ").strip()))
+        p_level = int(p_level)
         
     if continuar == 'y':
         #contador de preguntas
@@ -58,18 +58,18 @@ while correcto and n_pregunta < 3*p_level:
         #6. Imprimir el enunciado y sus altern1
         respuesta = input('Escoja la alternativa correcta:\n> ').lower()
         # 7. Validar la respuesta entregada
-        respuesta = validate(respuesta, opciones=alternativas)
+        respuesta = validate([alt[0] for alt in alternativas], respuesta)
         # 8. Verificar si la respuesta es correcta o no
         correcto = verificar(respuesta, alternativas)
         
-        if correcto and n_pregunta < 3*p_level:
+        if correcto and n_pregunta < 3 * p_level:
             print('Muy bien sigue así!')
             continuar = input('Desea continuar? [y/n]: ').lower()
             #9. Validar si es que se responde y o n
             continuar = validate(continuar, opciones=['y', 'n'])
             os.system(op_sys)
-        elif correcto and n_pregunta == 3*p_level:
-            print(f'Felicitaciones, Has respondido {3*p_level} preguntas correctas. \n Has ganado la Trivia \n Gracias por Jugar, hasta luego!!!')
+        elif correcto and n_pregunta == 3 * p_level:
+            print(f'Felicitaciones, Has respondido {3 * p_level} preguntas correctas. \n Has ganado la Trivia \n Gracias por Jugar, hasta luego!!!')
             time.sleep(3)
             os.system(op_sys)
         else: 
