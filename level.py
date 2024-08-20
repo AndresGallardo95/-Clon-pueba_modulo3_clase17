@@ -4,25 +4,25 @@ def choose_level( p_level, n_pregunta):
 
     Dependiendo de `p_level`, la función asigna un nivel de dificultad a `n_pregunta` utilizando las siguientes reglas:  
     - Si `p_level` es 2:  
-        - 'básico' para las preguntas 1 y 2.  
-        - 'intermedio' para las preguntas 3 y 4.  
-        - 'avanzado' para las preguntas 5 y 6.  
+        - 'básicas' para las preguntas 1 y 2.  
+        - 'intermedias' para las preguntas 3 y 4.  
+        - 'avanzadas' para las preguntas 5 y 6.  
     - Si `p_level` es 3:  
-        - 'básico' para las preguntas 1, 2 y 3.  
-        - 'intermedio' para las preguntas 4, 5 y 6.  
-        - 'avanzado' para las preguntas 7, 8 y 9.  
+        - 'básicas' para las preguntas 1, 2 y 3.  
+        - 'intermedias' para las preguntas 4, 5 y 6.  
+        - 'avanzadas' para las preguntas 7, 8 y 9.  
 
     :param n_pregunta: int, el número de pregunta actual (puede ser positivo).  
     :param p_level: int, el máximo nivel de dificultad permitido (2 o 3).  
     :return: str, el nivel de dificultad como una cadena ('basico', 'intermedio', 'avanzado').  
 
     Ejemplos:  
-    >>> choose_level(2, 2)  # Devuelve 'basico'  
-    >>> choose_level(4, 2)  # Devuelve 'intermedio'  
-    >>> choose_level(5, 2)  # Devuelve 'avanzado'  
-    >>> choose_level(3, 3)  # Devuelve 'basico'  
-    >>> choose_level(6, 3)  # Devuelve 'intermedio'  
-    >>> choose_level(8, 3)  # Devuelve 'avanzado'  
+    >>> choose_level(2, 2)  # Devuelve 'basicas'  
+    >>> choose_level(4, 2)  # Devuelve 'intermedias'  
+    >>> choose_level(5, 2)  # Devuelve 'avanzadas'  
+    >>> choose_level(3, 3)  # Devuelve 'basicas'  
+    >>> choose_level(6, 3)  # Devuelve 'intermedias'  
+    >>> choose_level(8, 3)  # Devuelve 'avanzadas'  
     """
     if p_level == 1:  
         if n_pregunta == 1:  
