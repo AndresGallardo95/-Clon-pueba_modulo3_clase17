@@ -56,7 +56,7 @@ while correcto and n_pregunta < 3*p_level:
         # 5. Escoger el enunciado y las alternativas de una pregunta según el nivel escogido
         enunciado, alternativas = choose_q(nivel)
         #6. Imprimir el enunciado y sus alternativas en pantalla
-        
+        print_pregunta(enunciado, alternativas)
         
         respuesta = input('Escoja la alternativa correcta:\n> ').lower()
         # 7. Validar la respuesta entregada
