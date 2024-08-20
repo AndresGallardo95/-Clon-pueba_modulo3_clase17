@@ -2,15 +2,9 @@ import preguntas as p
 
 def print_pregunta(enunciado, alternativas):
     
-    # Imprimir enunciado y alternativas
-    ###############################################################
-    pass
-    
-    
-    
-    
-    ###############################################################
-        
+    print(f'{enunciado}\n')
+    for i, (alt,_) in enumerate(alternativas):
+        print(f'{chr(65+i)}. {alt}')
 if __name__ == '__main__':
     # Las preguntas y alternativas deben mostrarse según lo indicado
     pregunta = p.pool_preguntas['basicas']['pregunta_1']
