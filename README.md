@@ -27,6 +27,32 @@ El programa llamado level.py permite escoger el nivel de dificultad de la pregun
 
 El programa llamado shuffle.py toma preguntas desde el archivo preguntas.py (con un nivel y una pregunta definida) y mezcla las alternativas para no darle un patron especifico.
 
+## 04 - question.py
+
+El programa llamado question.py permite escoger una pregunta que no se haya hecho durante la ejecución del programa dependiendo del nivel de dificultad.
+
+Toma las preguntas del archivo preguntas.py de acuerdo a la dificultad escogida. Escoge una pregunta de las opciones disponibles y elimina dicha opción para no volverla a escoger.
+
+## 05 - print_preguntas.py
+
+El programa llamado print_preguntas.py, permite mostrar en la app las preguntas de acuerdo a un formato
+El formato a utilizar es imprimir el enunciado,seguido de un salto de línea. Luego cada alternativa irá acompañada una letra asociada, una por cada línea de la siguiente manera:
+
+○ A. Alternativa 1
+○ B. Alternativa 2
+○ C. Alternativa 3
+○ D. Alternativa 4
+
+## 06- verify.py
+
+El programa llamado verify.py, cuya función es verificar si la respuesta entregada por el usuario es correcta.
+En el caso que la respuesta sea correcta se imprime en pantalla 'Respuesta Correcta' y retornar sólo el valor True, en caso contrario se imprime en pantalla
+'Respuesta Incorrecta' y retornar sólo el valor False.
+
+## 07 - main.py
+
+El programa main.py corresponde a la union de los programas anteriores para desarrollar el funcionamiento completo de la app solicitada por el cliente, consiste en el juego de trivias con 3 niveles de dificultad (basico, intermedio y avanzado).
+
 ## Prerrequisitos o Dependencias
 
 Sistema Operativo Windows, Linux, MacOS
