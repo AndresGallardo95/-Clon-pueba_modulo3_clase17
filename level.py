@@ -1,4 +1,4 @@
-def choose_level(n_pregunta, p_level):
+def choose_level( p_level, n_pregunta):
     """  
     Escoge el nivel de dificultad basado en el número de pregunta y el máximo nivel permitido.  
 
@@ -24,31 +24,28 @@ def choose_level(n_pregunta, p_level):
     >>> choose_level(6, 3)  # Devuelve 'intermedio'  
     >>> choose_level(8, 3)  # Devuelve 'avanzado'  
     """
-    if p_level == 1:
-        if 1 == n_pregunta:
-            level = "basico"
-        elif 2 == n_pregunta:
-            level = "intermedio"
-        elif 3 == n_pregunta:
-            level = "avanzado"
-
-    elif p_level == 2:
-        if 1 <= n_pregunta <= 2:
-            level = "basico"
-        elif 3 <= n_pregunta <= 4:
-            level = "intermedio"
-        elif 5 <= n_pregunta <= 6:
-            level = "avanzado"
-
-    elif p_level == 3:
-        if 1 <= n_pregunta <= 3:
-            level = "basico"
-        elif 4 <= n_pregunta <= 6:
-            level = "intermedio"
-        elif 7 <= n_pregunta <= 9:
-            level = "avanzado"
-
-    return level
+    if p_level == 1:  
+        if n_pregunta == 1:  
+                level = "basicas"  # Cambiado de 'basico' a 'basicas'  
+        elif n_pregunta == 2:  
+                level = "intermedias"  
+        elif n_pregunta == 3:  
+                level = "avanzadas"  
+    elif p_level == 2:  
+        if 1 <= n_pregunta <= 2:  
+            level = "basicas"  # Cambiado de 'basico' a 'basicas'  
+        elif 3 <= n_pregunta <= 4:  
+            level = "intermedias"  
+        elif 5 <= n_pregunta <= 6:  
+            level = "avanzadas"  
+    elif p_level == 3:  
+        if 1 <= n_pregunta <= 3:  
+            level = "basicas"  # Cambiado de 'basico' a 'basicas'  
+        elif 4 <= n_pregunta <= 6:  
+            level = "intermedias"  
+        elif 7 <= n_pregunta <= 9:  
+            level = "avanzadas"  
+    return level  
 
 
 if __name__ == '__main__':
