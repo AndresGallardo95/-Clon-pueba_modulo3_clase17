@@ -15,7 +15,7 @@ def choose_level(n_pregunta, p_level):
     :param n_pregunta: int, el número de pregunta actual (puede ser positivo).  
     :param p_level: int, el máximo nivel de dificultad permitido (2 o 3).  
     :return: str, el nivel de dificultad como una cadena ('basico', 'intermedio', 'avanzado').  
-    
+
     Ejemplos:  
     >>> choose_level(2, 2)  # Devuelve 'basico'  
     >>> choose_level(4, 2)  # Devuelve 'intermedio'  
@@ -23,8 +23,16 @@ def choose_level(n_pregunta, p_level):
     >>> choose_level(3, 3)  # Devuelve 'basico'  
     >>> choose_level(6, 3)  # Devuelve 'intermedio'  
     >>> choose_level(8, 3)  # Devuelve 'avanzado'  
-    """   
-    if p_level == 2:
+    """
+    if p_level == 1:
+        if 1 == n_pregunta:
+            level = "basico"
+        elif 2 == n_pregunta:
+            level = "intermedio"
+        elif 3 == n_pregunta:
+            level = "avanzado"
+
+    elif p_level == 2:
         if 1 <= n_pregunta <= 2:
             level = "basico"
         elif 3 <= n_pregunta <= 4:
