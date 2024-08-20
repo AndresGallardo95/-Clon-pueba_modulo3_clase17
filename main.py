@@ -45,7 +45,7 @@ while correcto and n_pregunta < 3*p_level:
     if n_pregunta == 0:
         p_level = input('¿Cuántas preguntas por nivel? (Máximo 3): ')
         # 3. Validar el número de preguntas por nivel
-        p_level = 
+        p_level = int(validate(p_level, 1, 3))  # Asumiendo que validate se usa para asegurarte de que el número esté entre 1 y 3. 
         
     if continuar == 'y':
         #contador de preguntas
