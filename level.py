@@ -14,7 +14,7 @@ def choose_level( p_level, n_pregunta):
 
     :param n_pregunta: int, el número de pregunta actual (puede ser positivo).  
     :param p_level: int, el máximo nivel de dificultad permitido (2 o 3).  
-    :return: str, el nivel de dificultad como una cadena ('basico', 'intermedio', 'avanzado').  
+    :return: str, el nivel de dificultad como una cadena ('basicas', 'intermedias', 'avanzadas').  
 
     Ejemplos:  
     >>> choose_level(2, 2)  # Devuelve 'basicas'  
