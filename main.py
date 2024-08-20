@@ -45,8 +45,8 @@ while correcto and n_pregunta < 3 * p_level:
     if n_pregunta == 0:
         p_level = validate(['1', '2', '3'], input('¿Cuántas preguntas por nivel? (Máximo 3): '))
         # 3. Validar el número de preguntas por nivel
-        p_level = int(p_level)
-        
+        p_level = int(validate(['1', '2', '3'], input("Ingrese el nivel de preguntas (1, 2, 3): ").strip()))
+                
     if continuar == 'y':
         #contador de preguntas
         n_pregunta += 1
@@ -56,11 +56,13 @@ while correcto and n_pregunta < 3 * p_level:
         # 5. Escoger el enunciado y las alternativas de una pregunta según el nivel escogido
         enunciado, alternativas = choose_q(nivel)
         #6. Imprimir el enunciado y sus altern1
+        print_pregunta(enunciado, alternativas)  # Aquí se asegura que las preguntas y opciones se imprimen antes de pedir la respuesta  
+        
         respuesta = input('Escoja la alternativa correcta:\n> ').lower()
         # 7. Validar la respuesta entregada
         respuesta = validate([alt[0] for alt in alternativas], respuesta)
         # 8. Verificar si la respuesta es correcta o no
-        correcto = verificar(respuesta, alternativas)
+        correcto = verificar(alternativas, respuesta) 
         
         if correcto and n_pregunta < 3 * p_level:
             print('Muy bien sigue así!')
