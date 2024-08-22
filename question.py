@@ -10,6 +10,26 @@ opciones = {'basicas': ['pregunta_1', 'pregunta_2', 'pregunta_3'],
 ###############################################
 
 def choose_q(dificultad):
+    """
+    Selecciona una pregunta al azar basada en la dificultad especificada, la mezcla, y la devuelve.
+
+    Args:
+        dificultad (str): La dificultad de la pregunta a seleccionar (por ejemplo, 'básica', 'intermedia', 'avanzada').
+
+    Returns:
+        tuple: Una tupla que contiene el enunciado de la pregunta (str) y una lista de alternativas mezcladas (list).
+
+    Behavior:
+        - Escoge una pregunta de la dificultad dada desde un conjunto global de preguntas.
+        - Mezcla las alternativas de la pregunta.
+        - Actualiza un conjunto global para evitar repetir preguntas en futuras llamadas.
+
+    Example:
+        enunciado, alternativas = choose_q('básica')
+        print(enunciado)
+        for alt in alternativas:
+            print(alt)
+    """
     # Escoger preguntas por dificultad
     preguntas = p.pool_preguntas[dificultad]
 
@@ -27,6 +47,7 @@ def choose_q(dificultad):
     alternativas = shuffle_alt(pregunta)
 
     return pregunta['enunciado'][0], alternativas
+
 
 if __name__ == '__main__':
     # Ejemplo de uso
